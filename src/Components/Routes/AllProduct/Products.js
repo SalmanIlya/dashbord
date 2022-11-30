@@ -65,7 +65,7 @@ NewProduct.slice(a,c).map((item)=>{
 <div className='d-flex justify-content-between'>
 <button className='btn btn-info' onClick={()=>{
     if(a===0){
-        b(0)
+        
     }else{
         b(a-5)
         d(c-5)
@@ -73,8 +73,13 @@ NewProduct.slice(a,c).map((item)=>{
 }}>pervious</button>
 <button className='btn btn-info' 
 onClick={()=>{
+  if(NewProduct.length===c ){
+b(0)
+d(5)
+  }else{
     b(a+5)
     d(c+5)
+  }
 }}
 >Next</button>
 
